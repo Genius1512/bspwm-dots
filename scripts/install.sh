@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Check if is root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
-
-export HOME=/home/silva
-
 # Move to tmp
 cd /tmp
 
