@@ -20,7 +20,10 @@ source /home/silva/.cargo/env
 # Install LunarVim
 wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
 sudo apt install -y ./nvim-linux64.deb
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y
+wget https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh
+mv install.sh install_lvim.sh
+chmod +x install_lvim.sh
+sudo ./install_lvim.sh
 
 sudo chmod +rwx /home/silva/.local
 
