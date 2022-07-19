@@ -13,9 +13,10 @@ cd /tmp
 sudo apt install -y curl
 sudo apt install -y wget
 sudo apt install -y git
+sudo apt install -y neovim
 
-# Install Xfce
-sudo apt install -y xfce4
+sudo apt install lxqt sddm -y
+sudo apt-get install lxqt openbox -y
 
 # Snaps
 sudo apt install -y snapd
@@ -26,7 +27,7 @@ snap install firefox
 wget https://sh.rustup.rs
 mv index.html install_rust.sh
 chmod +x install_rust.sh
-./install.sh -y
+./install_rust.sh -y
 
 # Reboot
 sudo reboot
