@@ -3,6 +3,12 @@
 # Utils
 sudo apt install wget
 
+# Install npm
+sudo apt install -y npm
+
+# Install python
+sudo apt install -y pip
+
 # Install the rust toolchain
 wget sh.rustup.rs
 mv index.html install_rust.sh
