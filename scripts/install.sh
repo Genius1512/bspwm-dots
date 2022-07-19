@@ -29,5 +29,3 @@ wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
 sudo apt install -y ./nvim-linux64.deb
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y
 
-# Reboot
-sudo reboot
