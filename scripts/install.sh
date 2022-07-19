@@ -23,6 +23,7 @@ sudo apt install -y ./nvim-linux64.deb
 wget https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh
 mv install.sh install_lvim.sh
 sed -i "s/command -v cargo/command -v \/home\/silva\/.cargo\/bin\/cargo/" install_lvim.sh
+sed -i "s/cargo install/\/home\/silva\/.cargo\/bin/cargo install/"
 chmod +x install_lvim.sh
 sudo ./install_lvim.sh -y
 
