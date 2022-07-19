@@ -6,3 +6,5 @@ rm nvim-linux64.deb
 
 source ~/.bashrc
 
+sudo reboot
+

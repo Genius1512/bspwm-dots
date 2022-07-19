@@ -11,5 +11,8 @@ wget https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/config/
 wget https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/config/plugins.lua -O ~/.local/share/lunarvim/lvim/lua/lvim/plugins.lua
 https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/config/keymappings.lua -O ~/local/share/lunarvim/lvim/lua/lvim/keymappings.lua
 
+# Install KDE
+sudo apt install kde-plasma-desktop
+
 source ~/.bashrc
 
