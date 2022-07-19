@@ -13,10 +13,13 @@ cd /tmp
 sudo apt install -y curl
 sudo apt install -y wget
 sudo apt install -y git
-sudo apt install -y neovim
 
-sudo apt install lxqt sddm -y
-sudo apt-get install lxqt openbox -y
+# Install neovim
+wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
+sudo apt install ./nvim-linux64.deb -y
+
+# Install kde
+# sudo apt install kde-plasma-desktop
 
 # Snaps
 sudo apt install -y snapd
