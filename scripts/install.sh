@@ -6,6 +6,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+export HOME=/home/silva
+
 # Move to tmp
 cd /tmp
 
