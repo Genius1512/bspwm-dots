@@ -18,7 +18,7 @@ wget sh.rustup.rs
 mv index.html install_rust.sh
 chmod +x install_rust.sh
 ./install_rust.sh -y --default-toolchain stable
-source ~/.cargo/env
+PATH="$PATH:~/.cargo/bin"
 
 source ~/.bashrc
 
