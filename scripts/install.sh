@@ -16,6 +16,7 @@ mv index.html install_rust.sh
 chmod +x install_rust.sh
 ./install_rust.sh -y
 source /home/silva/.cargo/env
+/home/silva/.cargo/bin/rustup default stable
 
 # Install LunarVim
 wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
