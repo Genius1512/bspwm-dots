@@ -6,3 +6,5 @@ chmod +x install_lvim.sh
 sudo ./install_lvim.sh -y
 echo "export PATH='$PATH:~/.local/bin'" >> ~/.bashrc
 
+source ~/.bashrc
+

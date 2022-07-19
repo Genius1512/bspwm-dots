@@ -19,8 +19,5 @@ mv index.html install_rust.sh
 chmod +x install_rust.sh
 ./install_rust.sh -y --default-toolchain stable
 
-# Cleanup
-rm install_rust.sh
-
 source ~/.bashrc
 
