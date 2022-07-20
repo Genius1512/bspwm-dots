@@ -247,7 +247,7 @@ function __install_nodejs_deps_npm() {
   for dep in "${__npm_deps[@]}"; do
     if ! npm ls -g "$dep" &>/dev/null; then
       printf "installing %s .." "$dep"
-      npm install -g "$dep"
+      sudo npm install -g "$dep"
     fi
   done
 
