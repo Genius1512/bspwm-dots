@@ -10,9 +10,8 @@ echo "export PATH='$PATH:~/.local/bin'" >> ~/.bashrc
 rm -rf ~/.local/share/lunarvim/lvim
 git clone https://github.com/Genius1512/lvim-config ~/.local/share/lunarvim/
 mv ~/.local/share/lunarvim/lvim-config ~/.local/share/lunarvim/lvim
+cp ~/.local/share/lunarvim/lvim/config.lua ~/.config/lvim/config.lua
 
-# Install KDE
-sudo apt install kde-plasma-desktop
 
 source ~/.bashrc
 
