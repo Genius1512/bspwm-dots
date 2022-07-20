@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Install LunarVim
-wget https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/install.sh -O install_lvim.sh
+wget https://raw.githubusercontent.com/Genius1512/dotfiles/main/install_lvim.sh -O install_lvim.sh
 chmod +x install_lvim.sh
 ./install_lvim.sh -y
 echo "export PATH='$PATH:~/.local/bin'" >> ~/.bashrc
 
 # Get LunarVim config
-wget https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/config/config.lua -O ~/.config/lvim/config.lua
-wget https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/config/plugins.lua -O ~/.local/share/lunarvim/lvim/lua/lvim/plugins.lua
-https://raw.githubusercontent.com/Genius1512/dotfiles/main/LunarVim/config/keymappings.lua -O ~/local/share/lunarvim/lvim/lua/lvim/keymappings.lua
+rm -rf ~/.local/share/lunarvim/lvim
+git clone https://github.com/Genius1512/lvim-config ~/.local/share/lunarvim/
+mv ~/.local/share/lunarvim/lvim-config ~/.local/share/lunarvim/lvim
 
 # Install KDE
 sudo apt install kde-plasma-desktop

@@ -2,6 +2,7 @@
 
 # Utils
 sudo apt install wget
+sudo apt install git
 
 # Install neovim
 wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
