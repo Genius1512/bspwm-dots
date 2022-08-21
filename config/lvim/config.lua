@@ -1,13 +1,3 @@
---[[
-lvim is the global options object
-
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -16,22 +6,23 @@ lvim.colorscheme = "tokyonight"
 -- lvim.use_icons = false
 
 require("transparent").setup({
-  enable = true,
+    enable = true,
 })
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
--- add your own keymapping
--- unmap a default keymapping
--- vim.keymap.del("n", "<C-Up>")
--- override a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
+lvim.keys.normal_mode["<C-o>"] = ":NvimTreeToggle<CR>"
+lvim.keys.normal_mode["<C-t>"] = ":ToggleTerm<CR>"
+lvim.keys.normal_mode["<C-q>"] = ":Alpha<CR>"
+
+-- Telescope
 lvim.builtin.telescope.defaults.file_ignore_patterns = { "%/.git/", "%/target/", "%/Cargo.lock" }
 lvim.builtin.telescope.defaults.respect_gitignore = true
 
--- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
+-- Enable plugins
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
@@ -39,29 +30,33 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
--- if you don't want all the parsers change this to a table of the ones you want
+-- Required treesitter parsers
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
+    "go",
 }
 
+-- Additional plugins
 lvim.plugins = {
-  { "folke/tokyonight.nvim" },
-  { "xiyaowong/nvim-transparent" },
+    { "folke/tokyonight.nvim" },
+    { "xiyaowong/nvim-transparent" },
+    { "github/copilot.vim" },
 }
 
+-- Formatters
 require("lvim.lsp.null-ls.formatters").setup({
-  { command = "black", filetypes = { "python" } }
+    { command = "black", filetypes = { "python" } }
 })
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }

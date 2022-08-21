@@ -1,0 +1,14 @@
+{
+    "main": {
+        "prefix": "main",
+        "body": [
+            "def main() -> int:",
+            "   return 0",
+            "",
+            "",
+            "if __name__ == \"__main__\":",
+            "   __import__(\"sys\").exit(main())"
+        ],
+        "description": "Create a main function and call it"
+    }
+}

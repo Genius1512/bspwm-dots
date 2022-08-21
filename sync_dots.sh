@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 rsync -avu --delete $HOME/.config/bspwm/*   $SCRIPT_DIR/config/bspwm
