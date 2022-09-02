@@ -5,25 +5,22 @@
 super + l
     betterlockscreen -l dim
 
-super + r
-  polybar -r
-
 # terminal emulator
 super + Return
 	kitty
 
 XF86AudioRaiseVolume
-  amixer -q sset Master 3%+
+    amixer -q sset Master 3%+
 
 XF86AudioLowerVolume
-  amixer -q sset Master 3%-
+    amixer -q sset Master 3%-
 
 XF86AudioMute
-  amixer -q sset Master toggle
+    amixer -q sset Master toggle
 
 # program launcher
 super + d
-	rofi -modi drun,run -show drun
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape

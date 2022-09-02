@@ -31,4 +31,6 @@ else
   polybar --reload example &
 fi
 
+setxkbmap ch
 nitrogen --restore
+picom -fb

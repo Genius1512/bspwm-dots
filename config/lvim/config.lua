@@ -1,7 +1,7 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "embark"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -19,7 +19,8 @@ lvim.keys.normal_mode["<C-t>"] = ":ToggleTerm<CR>"
 lvim.keys.normal_mode["<C-q>"] = ":Alpha<CR>"
 
 -- Telescope
-lvim.builtin.telescope.defaults.file_ignore_patterns = { "%/.git/", "%/target/", "%/Cargo.lock" }
+lvim.builtin.telescope.defaults.file_ignore_patterns = { "%/.git/", "%/target/", "%/Cargo.lock", "%/node_modules/",
+    "%/build/" }
 lvim.builtin.telescope.defaults.respect_gitignore = true
 
 -- Enable plugins
@@ -52,6 +53,7 @@ lvim.plugins = {
     { "folke/tokyonight.nvim" },
     { "xiyaowong/nvim-transparent" },
     { "github/copilot.vim" },
+    { 'embark-theme/vim', as = 'embark' }
 }
 
 -- Formatters

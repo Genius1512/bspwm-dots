@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 eval "$(starship init bash)"
 
+shopt -s cdspell
+
 export PATH="$PATH:$HOME/.local/bin/:$HOME/.npm-global/bin"
 . "$HOME/.cargo/env"
 
